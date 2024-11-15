@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agencia de Taxis - Rápido, seguro y 24/7">
+    <title>Agencia de Taxis - Rápido y Seguro</title>
+
+    <!-- Fuente de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        /* Reset de estilo */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body y fuentes */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            width: 85px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            margin: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Sección Hero */
+        #home {
+            background: url('https://tinyurl.com/dafsdfdf') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            background-size: cover;
+        }
+
+        #home h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        #home p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        #home .btn {
+            background-color: #f39c12;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #home .btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-5px);
+        }
+
+        /* Sección de Servicios */
+        #services {
+            background-color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        #services h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #34495e;
+        }
+
+        #services .service-box {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service-box .box {
+            background-color: #ecf0f1;
+            padding: 30px;
+            border-radius: 10px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin: 10px 0;
+        }
+
+        .service-box .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-box .box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        .service-box .box p {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .service-box .box i {
+            font-size: 40px;
+            color: #f39c12;
+            margin-bottom: 20px;
+        }
+
+        /* Sección de Contacto */
+        #contact {
+            background-color: #34495e;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        #contact .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact .contact-form input,
+        #contact .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        #contact .contact-form button {
+            background-color: #f39c12;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact .contact-form button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #e67e22;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #home h1 {
+                font-size: 40px;
+            }
+
+            #home p {
+                font-size: 18px;
+            }
+
+            #home .btn {
+                padding: 12px 25px;
+                font-size: 18px;
+            }
+
+            .service-box .box {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            #services h2 {
+                font-size: 32px;
+            }
+
+            #contact .contact-form input,
+            #contact .contact-form textarea {
+                font-size: 14px;
+            }
+
+            #contact .contact-form button {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #home h1 {
+                font-size: 32px;
+            }
+
+            #home p {
+                font-size: 16px;
+            }
+
+            #home .btn {
+                font-size: 16px;
+            }
+
+            #services h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://tinyurl.com/dfdfzzzz" alt="Logo Agencia de Taxis">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#about">Acerca de</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <section id="home">
+        <div class="container">
+            <h1>Tu Taxi Seguro y Confiable</h1>
+            <p>Viaja cómodo y seguro con nuestra agencia de taxis. ¡Servicio 24/7, en cualquier lugar y momento!</p>
+            <a href="#contact" class="btn">Reserva Ahora</a>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="services">
+        <div class="container">
+            <h2>Servicios de Transporte</h2>
+            <div class="service-box">
+                <div class="box">
+                    <i class="fas fa-plane-departure"></i>
+                    <h3>Traslados al Aeropuerto</h3>
+                    <p>Servicio rápido y cómodo para que llegues a tiempo a tu vuelo.</p>
+                </div>
+                <div class="box">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Disponible</h3>
+                    <p>Estamos disponibles a cualquier hora, los 7 días de la semana.</p>
+                </div>
+                <div class="box">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Viajes Personalizados</h3>
+                    <p>Te llevamos a cualquier destino, sin importar la distancia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <div class="contact-form">
+                <input type="text" id="name" placeholder="Tu nombre" required>
+                <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                <textarea id="message" placeholder="Tu mensaje" rows="4" required></textarea>
+                <button onclick="enviarFormulario()">Enviar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Agencia de Taxis. Todos los derechos reservados. <br> <a href="mailto:contacto@taxi.com">contacto@taxi.com</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function enviarFormulario() {
+            const nombre = document.getElementById('name').value;
+            const correo = document.getElementById('email').value;
+            const mensaje = document.getElementById('message').value;
+
+            if (nombre && correo && mensaje) {
+                alert('¡Gracias por tu mensaje, ' + nombre + '! Nos pondremos en contacto contigo pronto.');
+            } else {
+                alert('Por favor, completa todos los campos.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
